@@ -4,6 +4,18 @@ import { Body, Controller, Post } from '@nestjs/common';
 export class TimetableController {
   @Post('timetable')
   timetableWebhook(@Body() requestBody: any) {
-    return requestBody;
+    const from = requestBody.queryResult.parameters.from;
+    const to = requestBody.queryResult.parameters.to;
+    const datetime = requestBody.queryResult.parameters.datetime;
+
+    return {
+      fulfillmentMessages: [
+        {
+          text: {
+            text: [`I want to travel ${from} ${to} ${datetime}`],
+          },
+        },
+      ],
+    };
   }
 }
