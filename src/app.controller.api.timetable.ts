@@ -8,11 +8,13 @@ export class TimetableController {
     const to = requestBody.queryResult.parameters.to;
     const datetime = requestBody.queryResult.parameters.datetime;
 
+    const testDate = new Date(datetime.date_time);
+
     return {
       fulfillmentMessages: [
         {
           text: {
-            text: [`I want to travel ${from} ${to} ${datetime}`],
+            text: [`I want to travel ${from} ${to} ${testDate} ${testDate.getFullYear()}`],
           },
         },
       ],
