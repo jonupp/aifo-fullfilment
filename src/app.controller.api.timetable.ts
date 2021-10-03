@@ -13,7 +13,9 @@ export class TimetableController {
 
     const testDate = new Date(datetime.date_time);
     const date = testDate.toISOString().substr(0, 10);
-    const time = testDate.toTimeString().substr(0, 5);
+    const time = testDate
+      .toLocaleTimeString('de-CH', { timeZone: 'Europe/Berlin' })
+      .substr(0, 5);
 
     const result = await this.timetableService.getNextConnections(
       from,
@@ -35,7 +37,8 @@ export class TimetableController {
         .substr(0, 10)} at ${result.connections[0].sections[
         i
       ].departure.datetime
-        .toTimeString()
+        .toLocaleTimeString('de-CH', { timeZone: 'Europe/Berlin' })
+        .substr(0, 5)
         .substr(0, 5)}. \n`;
     }
     outputString += `The journey will take ${result.connections[0].duration.substr(
