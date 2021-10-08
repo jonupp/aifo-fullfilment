@@ -27,15 +27,19 @@ export class AttractionController {
       };
     }
 
-    return {
-      fulfillmentMessages: [
-        {
-          image: {
-            imageUri: attractions[0].imageUrl,
-            accessibilityText: attractions[0].name,
-          },
+    const fulfillmentMessages = [];
+
+    for (let i = 0; i < attractions.length; i++) {
+      fulfillmentMessages.push({
+        card: {
+          title: attractions[i].name,
+          imageUri: attractions[i].imageUrl,
         },
-      ],
+      });
+    }
+
+    return {
+      fulfillmentMessages: [fulfillmentMessages],
     };
   }
 }
