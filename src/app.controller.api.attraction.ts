@@ -1,6 +1,5 @@
 import { Body, Controller, Post } from '@nestjs/common';
 import { AttractionService } from './services/app.service.attraction';
-import { City } from './interfaces/AttractionInterfaces';
 
 @Controller('api')
 export class AttractionController {
@@ -27,7 +26,13 @@ export class AttractionController {
       };
     }
 
-    const fulfillmentMessages = [];
+    const fulfillmentMessages: any[] = [
+      {
+        text: {
+          text: [`I found the following ${attractions.length} attractions in ${cityName}:`],
+        },
+      },
+    ];
 
     for (let i = 0; i < attractions.length; i++) {
       fulfillmentMessages.push({

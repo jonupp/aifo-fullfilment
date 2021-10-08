@@ -25,7 +25,7 @@ export class AttractionService {
     const limitedData = await fetch(
       `${this.url}/en/places/radius?apikey=${this.configService.get(
         'attractapikey',
-      )}&lang=${'en'}&radius=${1000}&lon=${lon}&lat=${lat}&rate=${'3'}&limit=${limit}&format=${'json'}&kinds=${'museums,fortifications,monuments_and_memorials,glaciers,churches,historic_architecture'}`,
+      )}&lang=${'en'}&radius=${1000}&lon=${lon}&lat=${lat}&rate=${'3'}&limit=${limit}&format=${'json'}&kinds=${'museums,fortifications,monuments_and_memorials,glaciers,historic_architecture'}`,
     );
     const jsonLimitedData = await limitedData.json();
     const attractions: Attraction[] = [];
