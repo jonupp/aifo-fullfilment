@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { AppService } from './services/app.service';
 import { TimetableController } from './app.controller.api.timetable';
-import { TimetableService } from './app.services.timetable';
+import { TimetableService } from './services/app.services.timetable';
 
 @Module({
   imports: [],

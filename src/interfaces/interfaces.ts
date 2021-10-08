@@ -8,7 +8,8 @@ export interface Connection {
 }
 
 export interface Section {
-  train: string;
+  transportMean: TransportMean;
+  transportIdentifier: string;
   departure: Node;
   arrival: Node;
 }
@@ -17,4 +18,8 @@ export interface Node {
   name: string;
   platform: number;
   datetime: Date;
+}
+
+export enum TransportMean {
+  Train, Bus, Walk
 }
