@@ -39,7 +39,7 @@ export class AttractionController {
     }
 
     return {
-      fulfillmentMessages: [fulfillmentMessages],
+      fulfillmentMessages: fulfillmentMessages,
     };
   }
 }
