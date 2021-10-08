@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Connection, Section, TimetableResult, TransportMean } from '../interfaces/interfaces';
+import { Connection, Section, TimetableResult, TransportMean } from '../interfaces/TimeTableInterfaces';
 import fetch from 'node-fetch';
 
 @Injectable()

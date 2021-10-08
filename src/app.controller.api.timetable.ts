@@ -1,6 +1,6 @@
 import { Body, Controller, Post } from '@nestjs/common';
 import { TimetableService } from './services/app.services.timetable';
-import { Section, TransportMean } from './interfaces/interfaces';
+import { Section, TransportMean } from './interfaces/TimeTableInterfaces';
 
 function getTrainString(section: Section): string {
   return `In ${section.departure.name} go to platform ${section.departure.platform}
@@ -64,7 +64,6 @@ export class TimetableController {
       }
       outputString += `The journey will take ${result.connections[0].duration.substr(3, 8)}h.`;
     }
-
     return {
       fulfillmentMessages: [
         {
