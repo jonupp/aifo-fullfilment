@@ -28,7 +28,6 @@ export class AttractionService {
       )}&lang=${'en'}&radius=${1000}&lon=${lon}&lat=${lat}&rate=${'3'}&limit=${limit}&format=${'json'}&kinds=${'museums,fortifications,monuments_and_memorials,glaciers,churches,historic_architecture'}`,
     );
     const jsonLimitedData = await limitedData.json();
-
     const attractions: Attraction[] = [];
 
     for (let i = 0; i < jsonLimitedData.length; i++) {
@@ -40,7 +39,7 @@ export class AttractionService {
 
       const newAttraction: Attraction = {
         name: jsonLimitedData[i].name,
-        imageUrl: attractionDetailsDataJson.image,
+        imageUrl: attractionDetailsDataJson?.preview?.source,
       };
 
       attractions.push(newAttraction);
