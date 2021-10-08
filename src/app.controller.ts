@@ -27,6 +27,9 @@ export class AppController {
       case 'timetable.get': {
         return await getRedirectedResult(req);
       }
+      case 'attractions.get': {
+        return await getRedirectedResult(req);
+      }
     }
   }
 }
