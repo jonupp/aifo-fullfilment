@@ -34,16 +34,20 @@ export class AttractionController {
       },
     ];
 
-    /*
     for (let i = 0; i < attractions.length; i++) {
       fulfillmentMessages.push({
         card: {
           title: attractions[i].name,
           imageUri: attractions[i].imageUrl,
+          buttons: [
+            {
+              text: 'Visit website',
+              postback: attractions[i].imageUrl,
+            },
+          ],
         },
       });
     }
-    */
 
     for (let i = 0; i < attractions.length; i++) {
       fulfillmentMessages.push({
