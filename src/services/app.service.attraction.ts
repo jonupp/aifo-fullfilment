@@ -40,6 +40,7 @@ export class AttractionService {
       const newAttraction: Attraction = {
         name: jsonLimitedData[i].name,
         imageUrl: attractionDetailsDataJson?.preview?.source,
+        url: attractionDetailsDataJson?.wikpedia ?? attractionDetailsDataJson?.url,
       };
 
       attractions.push(newAttraction);

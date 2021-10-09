@@ -7,4 +7,5 @@ export interface City {
 export interface Attraction {
   name: string;
   imageUrl: string | null;
+  url: string | null;
 }

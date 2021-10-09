@@ -58,6 +58,7 @@ export class AttractionController {
               {
                 type: 'info',
                 title: attractions[i].name,
+                actionLink: attractions[i].url,
               },
             ],
           ],
