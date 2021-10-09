@@ -34,12 +34,28 @@ export class AttractionController {
       },
     ];
 
+    /*
     for (let i = 0; i < attractions.length; i++) {
       fulfillmentMessages.push({
         card: {
           title: attractions[i].name,
           imageUri: attractions[i].imageUrl,
         },
+      });
+    }
+    */
+
+    for (let i = 0; i < attractions.length; i++) {
+      fulfillmentMessages.push({
+        richContent: [
+          [
+            {
+              type: 'image',
+              rawUrl: attractions[i].imageUrl,
+              accessibilityText: attractions[i].name,
+            },
+          ],
+        ],
       });
     }
 
