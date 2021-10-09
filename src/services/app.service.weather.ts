@@ -7,9 +7,9 @@ export class WeatherService {
   private url = 'https://goweather.herokuapp.com/weather/';
 
   async getWeather(city: string): Promise<Weather> {
-    const data = await fetch(`${this.url}${city}`,);
-    return data.json().then((jsonData:any)=> {
-      return {city, temperature: jsonData.temperature, wind: jsonData.wind, description: jsonData.description};
+    const data = await fetch(`${this.url}${city}`);
+    return data.json().then((jsonData: any) => {
+      return { city, temperature: jsonData.temperature, wind: jsonData.wind, description: jsonData.description };
     });
   }
 }

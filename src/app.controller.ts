@@ -30,11 +30,11 @@ export class AppController {
       case 'attractions.get': {
         return await getRedirectedResult(req, '/api/attraction');
       }
-      case 'joke.get' : {
-        return await getRedirectedResult(req, '/api/joke')
+      case 'joke.get': {
+        return await getRedirectedResult(req, '/api/joke');
       }
-      case 'weather.get' : {
-        return await getRedirectedResult(req, '/api/weather')
+      case 'weather.get': {
+        return await getRedirectedResult(req, '/api/weather');
       }
     }
   }
