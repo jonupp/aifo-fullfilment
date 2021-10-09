@@ -47,15 +47,17 @@ export class AttractionController {
 
     for (let i = 0; i < attractions.length; i++) {
       fulfillmentMessages.push({
-        richContent: [
-          [
-            {
-              type: 'image',
-              rawUrl: attractions[i].imageUrl,
-              accessibilityText: attractions[i].name,
-            },
+        payload: {
+          richContent: [
+            [
+              {
+                type: 'image',
+                rawUrl: attractions[i].imageUrl,
+                accessibilityText: attractions[i].name,
+              },
+            ],
           ],
-        ],
+        },
       });
     }
 
