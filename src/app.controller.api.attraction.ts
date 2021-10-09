@@ -42,7 +42,7 @@ export class AttractionController {
           buttons: [
             {
               text: 'Visit website',
-              postback: attractions[i].imageUrl,
+              postback: attractions[i].url,
             },
           ],
         },
