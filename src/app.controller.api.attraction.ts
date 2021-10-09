@@ -55,6 +55,10 @@ export class AttractionController {
                 rawUrl: attractions[i].imageUrl,
                 accessibilityText: attractions[i].name,
               },
+              {
+                type: 'info',
+                title: attractions[i].name,
+              },
             ],
           ],
         },
