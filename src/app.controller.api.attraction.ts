@@ -29,7 +29,11 @@ export class AttractionController {
     const fulfillmentMessages: any[] = [
       {
         text: {
-          text: [`I found the following ${attractions.length} attractions in ${cityName}:`],
+          text: [
+            `I found the following ${
+              attractions.length == 1 ? 'attraction' : attractions.length + 'attractions'
+            } in ${cityName}:`,
+          ],
         },
       },
     ];
