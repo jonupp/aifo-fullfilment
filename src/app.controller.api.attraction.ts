@@ -31,7 +31,7 @@ export class AttractionController {
         text: {
           text: [
             `I found the following ${
-              attractions.length == 1 ? 'attraction' : attractions.length + 'attractions'
+              attractions.length == 1 ? 'attraction' : attractions.length + ' attractions'
             } in ${cityName}:`,
           ],
         },
