@@ -7,7 +7,6 @@ export class JokeController {
 
   @Post('joke')
   async getJoke() {
-
     const joke = await this.jokeService.getRandomJoke();
 
     const fulfillmentMessages: any[] = [

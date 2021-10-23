@@ -11,7 +11,7 @@ export class AttractionService {
 
   async getCityCoordinates(name: string): Promise<City> {
     const data = await fetch(
-      `${this.url}/en/places/geoname?apikey=${this.configService.get('attractapikey')}&lang=${'en'}&name=${name}`,
+      `${this.url}/en/places/geoname?apikey=${this.configService.get('attractapikey')}&lang=en&name=${name}`,
     );
     const jsonData = await data.json();
 
@@ -25,7 +25,7 @@ export class AttractionService {
     const limitedData = await fetch(
       `${this.url}/en/places/radius?apikey=${this.configService.get(
         'attractapikey',
-      )}&lang=${'en'}&radius=${1000}&lon=${lon}&lat=${lat}&rate=${'3'}&limit=${limit}&format=${'json'}&kinds=${'museums,fortifications,monuments_and_memorials,glaciers,historic_architecture'}`,
+      )}&lang=en&radius=${1000}&lon=${lon}&lat=${lat}&rate=3&limit=${limit}&format=json&kinds=museums,fortifications,monuments_and_memorials,glaciers,historic_architecture`,
     );
     const jsonLimitedData = await limitedData.json();
     const attractions: Attraction[] = [];
