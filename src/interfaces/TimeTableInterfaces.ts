@@ -21,5 +21,7 @@ export interface Node {
 }
 
 export enum TransportMean {
-  Train, Bus, Walk
+  Train,
+  Bus,
+  Walk,
 }
