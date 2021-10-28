@@ -1,4 +1,5 @@
 # Fullfilment server
+This project has no affiliation to SBB.
 This repository contains the fullfilment server for the AI-foundations project. The server was implemented using the NestJS framework.
 
 ## Installation
